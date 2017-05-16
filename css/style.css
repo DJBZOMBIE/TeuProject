@@ -5,8 +5,8 @@
 }
 
 body{
-   background: -moz-linear-gradient(top, #A9A9A9, #fff) repeat-X;
-    /*background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#fff)) repeat-X;*/
+    background: -moz-linear-gradient(top, #A9A9A9, #fff) repeat-X;
+    background: -webkit-gradient(linear, left top, left bottom, from(#A9A9A9), to(#fff)) repeat-X;
     margin:0;
     font-family:  arial, helvetica, sans-serif;
     
