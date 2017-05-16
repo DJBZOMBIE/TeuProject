@@ -1,0 +1,5 @@
+botões: http://www.htmlprogressivo.net/2014/01/Como-criar-botoes-HTML-Reset-limpar-Submit-enviar-Formulario.html
+
+formulario: https://www.youtube.com/watch?v=iN0xYdgRAzk
+
+tabela de cores: http://erikasarti.net/html/tabela-cores/
