@@ -37,6 +37,7 @@ function addParagrafo(inputCod, inputNome, inputCpf, inputEmail){
 
     var texto = document.createTextNode("Código: "+inputCod.value+"  "+"Nome: "+inputNome.value+"  "+"CPF: "+inputCpf.value+"E-Mail "+"  "+inputEmail.value);
     newP.appendChild(texto);
+    loadLocalStorage();
 }
 
 function loadLocalStorage(){
