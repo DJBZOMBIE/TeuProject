@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/form.js"></script>
+   
+    
     <title>Cadastro Cliente</title>
 </head>
-<body>
+<body id="body">
 <header>
-    <!--inicio menu-->
+    <!--inicio menu
    <nav> 
        <ul class="menu">
            <li><a href="#">Home</a></li>
@@ -40,26 +41,35 @@
            <li><a href="#">Sobre</a></li>
         </ul>
    </nav>
-    <!-- fim menu-->
+     fim menu-->
 </header>
 <!-- inicio formulario-->
     <form caction="" class="formulario">
         <h1 class="formulario__titulo">Cadastro de Cliente</h1>
-        <input type="text" class="formulario__input">
+        <input type="text"  class="formulario__input" id="codigo">
         <label for="" class="formulario__label">Código:</label>
-        <input type="text" class="formulario__input">
+        <input type="text"  class="formulario__input" id="nome">
         <label for="" class="formulario__label">Nome:</label>
-        <input type="text" class="formulario__input">
+        <input type="text" class="formulario__input" id="cpf">
         <label for="" class="formulario__label">CPF:</label>
-        <input type="text" class="formulario__input">
+        <input type="text"  class="formulario__input" id="email">
         <label for="" class="formulario__label">E-Mail:</label>
-        <input type="submit" value="Salvar" class="formulario__submit">
-        <input type="button" name="botao-cancelar" value="Cancelar" class="formulario__submit">
+        <input type="button" value="Salvar" class="formulario__submit" id="save">
+        <input type="button" name="botao-listar" value="Listar" class="formulario__submit" id="check">
     </form>
 <!-- fim formulario -->
+<p id="adicionar" class="idP">
+    Adicionando:
+</p>
+<p id="checks" class="checkss">
+    Listando:
+</p>
+<script src="js/index.js"></script>
+<script src="js/form.js"></script>
+
 </body>
 
 <footer>
-    <p>Teu Project. BY DJBZOMBIE and Matheus</p>
+    <p>Teu Project. BY Daniel JB and Matheus</p>
 </footer>
 </html>

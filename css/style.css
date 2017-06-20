@@ -15,7 +15,7 @@ body{
     
 }
 
-.menu{
+/*.menu{
   width: 40%;
   max-width: 100%;
   max-height: 100%;
@@ -52,8 +52,8 @@ body{
     -webkit-box-shadow:0 3px 10px 0 #ccc; 
     text-shadow:0px 0px 5px #fff; 
 }
-
-/*submenu*/
+*/
+/*submenu
 .menu li ul{
     position: absolute;
     top:35px;
@@ -62,7 +62,7 @@ body{
     display:none; 
 }
 
-/*exibir submenu */
+/*exibir submenu 
 .menu li:hover ul, .menu li.over ul{display:block;}
 
 .menu li ul li{
@@ -78,7 +78,7 @@ body{
     width:500px;
     max-width: 100%;
     margin: auto;
-    margin-top: 160px;
+    margin-top: 120px;
     padding: 20px;
     box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
     position: relative;
@@ -136,9 +136,23 @@ body{
     margin-top:-130px;
 }
 
+.idP{
+    margin-top: 50px; 
+    position: absolute;
+    left:16%;
+    font-weight: bolder;
+    border: 1px solid #696969;
+}
+.checkss{
+   margin-top: 50px; 
+    position: absolute;
+    left:60%; 
+    font-weight: bolder;
+    border: 1px solid #696969;
+}
 footer{
     text-align: center;
-    color: silver;
+    color: #696969;
     position: absolute; 
     bottom: 0px; 
     width: 100%; 
