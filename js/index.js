@@ -20,24 +20,29 @@ function saveLocalStorage(){
     var inputCpf = document.getElementById('cpf');
     var inputEmail = document.getElementById('email');
 
-    localStorage.setItem('Codigo', inputCod.value);
-    localStorage.setItem('Nome', inputNome.value);
-    localStorage.setItem('Cpf', inputCpf.value);
-    localStorage.setItem('Email', inputEmail.value);
-    addParagrafo(inputCod, inputNome, inputCpf, inputEmail);
+    if(inputCod.value!='' && inputNome.value!='' && inputCpf.value!='' && inputEmail.value!=''){
+        localStorage.setItem('Codigo', inputCod.value);
+        localStorage.setItem('Nome', inputNome.value);
+        localStorage.setItem('Cpf', inputCpf.value);
+        localStorage.setItem('Email', inputEmail.value);
+        addParagrafo(inputCod, inputNome, inputCpf, inputEmail);
+    }else{
+        alert('Erro: Preencha todos os campos!');
+    }
 }
 
 function addParagrafo(inputCod, inputNome, inputCpf, inputEmail){
     var newP = document.createElement('p');
   
-    var lista = document.getElementById('adicionar');
+    var lista = document.getElementById('checks');
 
     lista.appendChild(newP)
    
 
-    var texto = document.createTextNode("Código: "+inputCod.value+"  "+"Nome: "+inputNome.value+"  "+"CPF: "+inputCpf.value+"E-Mail "+"  "+inputEmail.value);
+    var texto = document.createTextNode("Código: "+inputCod.value+"  "+"Nome: "+inputNome.value+"  "+"CPF: "+inputCpf.value+" E-Mail: "+"  "+inputEmail.value);
     newP.appendChild(texto);
     loadLocalStorage();
+    
 }
 
 function loadLocalStorage(){
@@ -45,22 +50,32 @@ function loadLocalStorage(){
     var nom = localStorage.getItem('Nome');
     var cc = localStorage.getItem('Cpf');
     var emm = localStorage.getItem('Email');
+
+    if(cod!='' && nom!='' && cc!=''&& emm!=''){
+        var tr = document.createElement('tr');
+        var listTable = document.getElementById('tabela');
+        var tdCod = document.createElement('td');
+        var tdNome = document.createElement('td');
+        var tdCpf = document.createElement('td');
+        var tdEmail = document.createElement('td');
     
-    var inputCod = document.getElementById('codigo');
-    var inputNom = document.getElementById('nome');
-    var inputCppF = document.getElementById('cpf');
-    var inputEmmail = document.getElementById('email');
-    
-    inputCod.value = cod;
-    inputNom.value = nom;
-    inputCppF.value = cc;
-    inputEmmail.value = emm;
+         listTable.appendChild(tr);
 
-    var newP = document.createElement('p');
-    var lista = document.getElementById("checks");
-    lista.appendChild(newP);
+        var txCod = document.createTextNode(cod);
+        var txNome = document.createTextNode(nom);
+        var txCPF = document.createTextNode(cc);
+        var txeMAIL = document.createTextNode(emm);
 
-    var texto = document.createTextNode("Código: "+inputCod.value+"  "+"Nome: "+inputNom.value+"  "+"CPF: "+inputCppF.value+"E-Mail "+"  "+inputEmmail.value);
-    newP.appendChild(texto);
+        tr.appendChild(tdCod);
+        tr.appendChild(tdNome);
+        tr.appendChild(tdCpf);
+        tr.appendChild(tdEmail);
 
+        tdCod.appendChild(txCod);
+        tdNome.appendChild(txNome);
+        tdCpf.appendChild(txCPF);
+        tdEmail.appendChild(txeMAIL);
+    }else{
+        alert('Erro: Algum campo no banco deve estar vazio!');
+    }
 }
